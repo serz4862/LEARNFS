@@ -1,8 +1,12 @@
 // import React from "react";
-
-function Slider({ intensity }) {
+import { useState } from "react";
+function Slider() {
+  const [intensity, setIntensity] = useState(0.5);
   const handleChangeIntensity = (event) => {
-    intensity(event.target.value);
+    const newIntensity = event.target.value;
+    setIntensity(newIntensity);
+
+
   };
 
   const backgroundStyle = {
